@@ -9,6 +9,11 @@
 }
 
 .about-video {
+    background-image: url("images/video-play.png"), linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url("images/bg-city.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-color: #252525;
     color: #fff;
+    width: 100%;
 }
