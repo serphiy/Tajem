@@ -5,8 +5,16 @@
 @import "partial/_logo.scss";
 @import "partial/_button.scss";
 @import "partial/_header.scss";
+@import "partial/_about.scss";
+@import "partial/_expertise.scss";
+@import "partial/_team.scss";
+@import "partial/_works.scss";
+@import "partial/_testimonials.scss";
+@import "partial/_contact.scss";
+@import "partial/_footer.scss";
 
 body {
+    background-color: #252525;
     margin: 0 0;
     padding: 0 0;
 }
