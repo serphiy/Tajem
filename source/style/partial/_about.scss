@@ -1,12 +1,57 @@
 .page-about {
     background-color: #fff;
     color: #413d4b;
+    text-align: center;
+    width: 100%;
 }
 
 .about-description {
     background-color: #fff;
     color: #413d4b;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.about-description__img {
+    background-image: url("images/logo-big.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    margin: 25px 100px 25px 25px;
+    height: 229px;
+    width: 235px;
+    display: inline-flex;
+    flex: 0 0 auto;
+}
+.about-description__content {
+    display: inline-block;
+    margin: 0 25px 0 25px;
+    text-align: left;
+    display: inline-flex;
+    flex: 0 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+    .about-description__title {
+        color: #413d4b;
+        font-family: "Playfair Display";
+        font-size: 22px;
+        font-weight: 700;
+        margin: 0 auto 25px 0;
+        max-width: 535px;
+        text-transform: uppercase;
+    }
+    .about-description__text {
+        color: #413d4b;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 300;
+        margin: 0 auto 25px 0;
+        max-width: 535px;
+    }
 
 .about-video {
     background-image: url("images/video-play.png"), linear-gradient(to right, rgba(9,5,47,0.85) 0%, rgba(49,29,94,0.85) 100%), url("images/bg-city.png");
