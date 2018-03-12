@@ -1,19 +1,19 @@
 .page-about {
     background-color: #fff;
-    color: #000;
+    color: #413d4b;
 }
 
 .about-description {
     background-color: #fff;
-    color: #000;
+    color: #413d4b;
 }
 
 .about-video {
-    background-image: url("images/video-play.png"), linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url("images/bg-city.png");
+    background-image: url("images/video-play.png"), linear-gradient(to right, rgba(9,5,47,0.85) 0%, rgba(49,29,94,0.85) 100%), url("images/bg-city.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: #252525;
+    background-color: #0A0637;
     color: #fff;
     width: 100%;
 }
