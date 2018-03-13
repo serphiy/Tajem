@@ -1,26 +1,98 @@
 .page-expertise {
     background-color: #fff;
     color: #413d4b;
+    min-height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .expertise-title {
     background-color: #fff;
     color: #413d4b;
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 25px 25px 0 25px;
+    max-width: 775px;
+    text-align: center;
+    text-transform: uppercase;
 }
     .expertise-subtitle {
         background-color: #fff;
         color: #2f2d35;
+        font-family: "Playfair Display", serif;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 5px 25px 0 25px;
+        max-width: 775px;
+        text-align: center;
+        &::after {
+            content: "";
+            background-color: #413d4b;
+            opacity: 0.3;
+            display: block;
+            height: 2px;
+            margin: 15px auto 10px auto;
+            width: 50px;
+        }
     }
 
+.expertise-content{
+    max-width: 930px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
 .expertise-card {
     background-color: #fff;
     color: #413d4b;
+    margin: 40px 15px 25px 15px;
+    max-width: 255px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+    .expertise-card__icon {
+        margin: 32px 0 0 0;
+    }
+        .expertise-card__icon_web {
+            @include sprite($icon-web);
+        }
+        .expertise-card__icon_branding {
+            @include sprite($icon-branding);
+        }
+        .expertise-card__icon_mobile {
+            @include sprite($icon-mobile);
+        }
+        .expertise-card__icon_optimization {
+            @include sprite($icon-optimization);
+        }
+        .expertise-card__icon_game {
+            @include sprite($icon-game);
+        }
+        .expertise-card__icon_love {
+            @include sprite($icon-love);
+        }
     .expertise-card__title {
         background-color: #fff;
-        color: #413d4b
+        color: #413d4b;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 900;
+        margin: 32px 0 0 0;
+        text-transform: uppercase;
+
     }
     .expertise-card__text {
         background-color: #fff;
-        color: #333333
+        color: #333333;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        margin: 25px 0 0 0;
+        text-align: center;
     }
