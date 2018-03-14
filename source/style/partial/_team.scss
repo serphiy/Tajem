@@ -1,25 +1,88 @@
 .page-team {
+    background-image: linear-gradient(to right, rgba(9,5,47,0.85) 0%, rgba(49,29,94,0.85) 100%), url("images/bg-trees-color.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-color: #0A0637;
     color: #fff;
+    min-height: 712px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .team-title {
     color: #fff;
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 25px 0 25px;
+    max-width: 775px;
+    text-align: center;
+    text-transform: uppercase;
 }
     .team-subtitle {
         color: #f9f9f9;
+        font-family: "Playfair Display", serif;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 11px 25px 0 25px;
+        max-width: 775px;
+        text-align: center;
+        &::after {
+            content: "";
+            background-color: #ffffff;
+            opacity: 0.2;
+            display: block;
+            height: 2px;
+            margin: 18px auto 10px auto;
+            width: 50px;
+        }
     }
+
+.team-people {
+    max-width: 965px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
 
 .team-card {
     color: #fff;
+    border: 1px solid rgba(225,225,225,0.5);
+    margin: 35px 10px 25px 10px;
+    max-width: 218px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
     .team-card__name {
         color: #fff;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 900;
+        margin: 20px 2px 0 2px;
+        text-align: center;
+        text-transform: uppercase;
     }
     .team-card__position {
         color: #fafafa;
+        font-family: "Roboto", sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        margin: 12px 2px 25px 2px;
+        text-align: center;
+        text-transform: uppercase;
     }
 
 .team-join {
     color: #f3f3f3;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 65px 25px 25px 25px;
+    text-align: center;
 }
