@@ -1,24 +1,229 @@
 .page-footer {
+    background-image: linear-gradient(to right, rgba(9,5,47,0.85) 0%, rgba(49,29,94,0.85) 100%), url("images/bg-desk.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-color: #0A0637;
     color: #fff;
+    min-height: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-main {
+    max-width: 950px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
 .footer-description {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
     color: #fff;
+    max-width: 285px;
+    text-align: left;
 }
+    .footer-description__content {
+        margin: 25px 5px 0 5px;
+    }
 
 .footer-contact-info {
     color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    max-width: 280px;
 }
+    .footer-contact-info__title {
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin: 25px 5px 0 5px;
+    }
+    .footer-contact-info__address {
+        margin: 35px 5px 0 5px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        &::before {
+            flex: 0 0 auto;
+            content: "";
+            display: block;
+            margin-right: 15px;
+            @include sprite($icon-location);
+        }
+    }
+    .footer-contact-info__phone {
+        margin: 20px 5px 0 5px;
+        &::before {
+            content: "";
+            display: inline-block;
+            margin-right: 12px;
+            @include sprite($icon-phone);
+        }
+    }
 
 .footer-subscribe {
     color: #fff;
 }
+    .footer-subscribe__title {
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin: 25px 5px 0 5px;
+    }
+    .footer-subscribe__form {
+        margin: 35px 0 0 0;
+        padding: 0 0;
+    }
+    .footer-subscribe__input-text {
+        width: 181px;
+        height: 15px;
+        background-color: transparent;
+        border: 1px solid rgba(255,255,255,0.5);
+        color: #ffffff;
+        display: inline-block;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        margin: 0 5px 0 5px;
+        padding: 15px 15px;
+        vertical-align: bottom;
+    }
+    .footer-subscribe__submit {
+        background-image: url("images/send-btn.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgba(255,255,255,0.5);
+        border: none;
+        display: inline-block;
+        cursor: pointer;
+        width: 70px;
+        height: 47px;
+        margin: 0 5px 0 5px;
+        vertical-align: bottom;
+        &:hover {
+            background-color: rgba(255,255,255,0.8);
+        }
+        &:active {
+            background-color: rgba(255,255,255,0.7);
+        }
+    }
+    .footer-subscribe__social {
+        margin: 25px 0 0 0;
+    }
+    .footer-subscribe__link {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        margin: 0 5px 0 5px;
+        position: relative;
+        &:hover {
+        background-color: #09052f;
+        }
+        &:active {
+            background-color: #311d5e;
+        }
+    }
+    .footer-subscribe__link_facebook::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: (35px/2-$icon-facebook-width/2);
+        top: (35px/2-$icon-facebook-height/2);
+        @include sprite($icon-facebook);
+    }
+    .footer-subscribe__link_twitter::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: (35px/2-$icon-twitter-width/2);
+        top: (35px/2-$icon-twitter-height/2);
+        @include sprite($icon-twitter);
+    }
+    .footer-subscribe__link_dribbble::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: (35px/2-$icon-dribbble-width/2);
+        top: (35px/2-$icon-dribbble-height/2);
+        @include sprite($icon-dribbble);
+    }
+    .footer-subscribe__link_instagram::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: (35px/2-$icon-instagram-width/2);
+        top: (35px/2-$icon-instagram-height/2);
+        @include sprite($icon-instagram);
+    }
+    .footer-subscribe__link_google-plus::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: (35px/2-$icon-google-plus-width/2+1);
+        top: (35px/2-$icon-google-plus-height/2);
+        @include sprite($icon-google-plus);
+    }
+    .footer-subscribe__link_youtube::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: (35px/2-$icon-youtube-width/2);
+        top: (35px/2-$icon-youtube-height/2);
+        @include sprite($icon-youtube);
+    }
+
+.footer-footer {
+    margin-top: 60px;
+    max-width: 950px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .footer-nav {
     color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
 }
+    .footer-nav__list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .footer-nav__item {
+        display: inline-block;
+    }
+    .footer-nav__link {
+        display: inline-block;
+        color: white;
+        padding: 10px 10px;
+        text-decoration: none;
+        &:hover {
+            background-color: #09052f;
+        }
+    }
 
 .footer-copy {
     color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 5px;
 }
