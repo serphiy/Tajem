@@ -1,6 +1,28 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,900&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,900&subset=cyrillic');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900&subset=cyrillic');
 @import url('https://fonts.googleapis.com/css?family=Hammersmith+One');
+
+@import "partial/_normalize.css";
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+    background-color: #0A0637;
+    color: #fff;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+header, nav, footer, section, article, div {
+  box-sizing: border-box;
+}
 
 @import "partial/_sprite.scss";
 @import "partial/_logo.scss";
@@ -14,8 +36,3 @@
 @import "partial/_contact.scss";
 @import "partial/_footer.scss";
 
-body {
-    background-color: #0A0637;
-    margin: 0 0;
-    padding: 0 0;
-}
