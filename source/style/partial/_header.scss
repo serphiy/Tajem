@@ -44,7 +44,7 @@
         text-align: center;
         padding: 10px 10px;
         text-decoration: none;
-        &:hover {
+        &:hover, &:active {
             background-color: #09052f;
         }
     }
