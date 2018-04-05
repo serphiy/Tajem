@@ -3,17 +3,24 @@
     color: #413d4b;
     min-height: 550px;
     padding: 40px 0 65px 0;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
+    display: inline-block;
+}
+@supports (display: flex) and (flex-wrap: wrap) {
+    .page-contact {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        flex-wrap: wrap;
+    }
 }
 
 .contact-form {
     background-color: #fff;
     color: #413d4b;
     margin: 0 20px;
-    min-height: 490px;
-    min-width: 510px;
+    margin-bottom: 30px;
+    min-height: 400px;
+    min-width: 90%;
     display: inline-flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -26,14 +33,18 @@
         font-size: 22px;
         font-weight: 700;
         margin: 25px 25px 0 25px;
-        max-width: 460px;
+        max-width: 100%;
         text-align: left;
         text-transform: uppercase;
     }
+    .contact-form__form {
+        width: 99%;
+    }
     .contact-form__item {
-        width: 430px;
+        width: 90%;
         height: 15px;
         border: 1px solid #e6e6e6;
+        box-sizing: border-box;
         color: #413d4b;
         display: block;
         font-family: Roboto;
@@ -43,7 +54,7 @@
         padding: 15px 15px;
     }
     .contact-form__item_large {
-        height: 200px;
+        height: 100px;
         margin-bottom: 20px;
     }
 
@@ -51,7 +62,7 @@
     background-color: #fff;
     color: #413d4b;
     margin: 0 20px;
-    min-height: 490px;
+    min-height: 450px;
     display: inline-flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -70,7 +81,7 @@
     }
     .contact-clients__images {
         margin: 0 25px 0 25px;
-        max-width: 400px;
+        width: 80%;
         display: inline-flex;
         justify-content: space-between;
         align-items: center;
@@ -78,4 +89,33 @@
     }
     .contact-clients__img {
         margin: 40px 0 0 0;
+        width: 50%;
+        flex: 0.5 0.5 auto;
     }
+
+@media screen and (min-width: 510px) {
+    .contact-form {
+        min-height: 490px;
+        min-width: 510px;
+    }
+    .contact-form__form {
+        width: 100%;
+    }
+    .contact-form__title {
+        max-width: 460px;
+    }
+    .contact-form__item {
+        width: 430px;
+    }
+    .contact-form__item_large {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    .contact-clients {
+        min-height: 490px;
+    }
+    .contact-clients__images {
+        width: 100%;
+        max-width: 400px;
+    }
+}

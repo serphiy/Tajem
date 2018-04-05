@@ -4,6 +4,7 @@
     padding: 25px 0 30px 0;
     min-height: 745px;
     width: 100%;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -11,11 +12,19 @@
 }
 
 .works-titlebar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    text-align: center;
     align-self: center;
-    flex-wrap: no-wrap;
+}
+
+@supports (display: flex) and (flex-wrap: wrap) {
+    .works-titlebar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
 }
 
 .works-title {
@@ -28,7 +37,6 @@
     max-width: 770px;
     text-align: center;
     text-transform: uppercase;
-    flex: 0 0.3 770px;
 }
 
 .works-all {
@@ -41,7 +49,6 @@
     max-width: 770px;
     text-align: center;
     text-decoration: none;
-    flex: 0 0.3 770px;
     &:hover {
         text-decoration: underline;
     }
@@ -52,9 +59,12 @@
     }
 }
 .works-images {
-    max-width: 1610px;
+    max-width: 1700px;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
     margin: 25px 0;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: stertch;
@@ -65,5 +75,37 @@
     .works-images__img {
         display: inline-block;
         margin: 0 0;
-        flex: 0.1 0.1 auto;
+        flex: 0.5 0.5 auto;
     }
+    @media screen and (max-width: 410px) {
+        .works-images__img {
+            flex-basis: 100%;
+        }
+    }
+    @media screen and (min-width: 550px) and (max-width: 749px) {
+        .works-images__img {
+            flex-basis: 50%;
+        }
+    }
+    @media screen and (min-width: 750px) and (max-width: 1023px) {
+        .works-images__img {
+            flex-basis: 33.333%;
+        }
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1604px) {
+        .works-images__img {
+            flex-basis: 25%;
+        }
+    }
+    @media screen and (min-width: 1605px) {
+        .works-images__img {
+            flex-basis: 16.667%;
+        }
+    }
+
+@media screen and (min-width: 750px) {
+    .works-titlebar {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

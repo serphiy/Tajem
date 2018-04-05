@@ -1,7 +1,8 @@
 .page-expertise {
     background-color: #fff;
     color: #413d4b;
-    min-height: 750px;
+    min-height: 700px;
+    padding: 25px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,22 +40,28 @@
         }
     }
 
-.expertise-content{
+.expertise-content {
     max-width: 930px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+}
+@supports (display: flex) and (flex-wrap: wrap) {
+    .expertise-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
 }
 .expertise-card {
     background-color: #fff;
     color: #413d4b;
     margin: 40px 15px 25px 15px;
     max-width: 255px;
-    display: flex;
+    display: inline-block;
+    display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-basis: 50%;
 }
     .expertise-card__icon {
         margin: 32px 0 0 0;
@@ -84,6 +91,7 @@
         font-size: 14px;
         font-weight: 900;
         margin: 32px 0 0 0;
+        text-align: center;
         text-transform: uppercase;
 
     }

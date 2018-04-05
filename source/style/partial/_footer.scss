@@ -4,8 +4,10 @@
     background-size: cover;
     background-position: center;
     background-color: #0A0637;
+    box-sizing: border-box;
     color: #fff;
-    min-height: 400px;
+    min-height: 350px;
+    padding: 25px 10px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -16,10 +18,16 @@
 .footer-main {
     max-width: 950px;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
+    display: inline-block;
+}
+@supports (display: flex) and (flex-wrap: wrap) {
+    .footer-main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        align-content: space-around;
+    }
 }
 
 .footer-description {
@@ -27,6 +35,7 @@
     font-size: 14px;
     font-weight: 300;
     color: #fff;
+    margin: 25px 5px;
     max-width: 285px;
     text-align: left;
 }
@@ -39,6 +48,7 @@
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     font-weight: 300;
+    margin: 25px 5px;
     max-width: 280px;
 }
     .footer-contact-info__title {
@@ -73,6 +83,7 @@
 
 .footer-subscribe {
     color: #fff;
+    margin: 25px 5px;
 }
     .footer-subscribe__title {
         font-family: "Roboto", sans-serif;
@@ -86,7 +97,7 @@
         padding: 0 0;
     }
     .footer-subscribe__input-text {
-        width: 181px;
+        width: 60%;
         height: 15px;
         background-color: transparent;
         border: 1px solid rgba(255,255,255,0.5);
@@ -107,7 +118,7 @@
         border: none;
         display: inline-block;
         cursor: pointer;
-        width: 70px;
+        width: 20%;
         height: 47px;
         margin: 0 5px 0 5px;
         vertical-align: bottom;
@@ -186,13 +197,20 @@
     }
 
 .footer-footer {
-    margin-top: 60px;
+    margin-top: 30px;
     max-width: 950px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    width: 90%;
+    text-align: center;
+    display: inline-block;
+}
+@supports (display: flex) and (flex-wrap: wrap) {
+    .footer-footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+    }
 }
 
 .footer-nav {
@@ -226,4 +244,15 @@
     font-size: 14px;
     font-weight: 400;
     margin: 0 5px;
+    padding: 10px 10px;
+}
+
+@media screen and (min-width: 900px) {
+    .footer-main {
+        justify-content: space-between;
+    }
+    .footer-footer {
+        margin-top: 60px;
+        justify-content: space-between;
+    }
 }

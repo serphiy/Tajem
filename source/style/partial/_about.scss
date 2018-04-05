@@ -8,21 +8,22 @@
 .about-description {
     background-color: #fff;
     color: #413d4b;
-    min-height: 400px;
+    max-width: 100%;
+    min-height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 25px 0;
 }
 .about-description__img {
     background-image: url("images/logo-big.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    display: inline-block;
-    margin: 25px 100px 25px 25px;
+    display: none;
+    margin: 25px 25px 25px 25px;
     height: 229px;
     width: 235px;
-    display: inline-flex;
     flex: 0 0 auto;
 }
 .about-description__content {
@@ -30,7 +31,7 @@
     margin: 0 25px 0 25px;
     text-align: left;
     display: inline-flex;
-    flex: 0 1 auto;
+    flex: 0 2 auto;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -61,4 +62,18 @@
     background-color: #0A0637;
     color: #fff;
     width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+    .about-description {
+        min-height: 350px;
+    }
+    .about-description__img {
+        display: inline-block;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .about-description__img {
+        margin-right: 100px;
+    }
 }
