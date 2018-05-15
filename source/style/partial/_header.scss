@@ -73,6 +73,7 @@
     left: -200px;
     transition: left 0.3s ease;
     flex: 1 1 auto;
+    z-index: 1;
 }
 
 .main-menu.main-menu_open {
@@ -112,10 +113,15 @@
     justify-content: center;
 }
 
+.slide-intro.slick-slide {
+    display: flex;
+}
+
 .slide-intro {
     text-align: center;
     padding: 25px;
-    min-height: 350px;
+    padding-bottom: 55px;
+    min-height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -143,6 +149,75 @@
         margin: 25px auto 50px auto;
         max-width: 775px;
     }
+
+.carousel-intro .slick-dots {
+    position: absolute;
+    bottom: 25px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    li {
+        position: relative;
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        margin: 0 2.5px;
+        padding: 0;
+        cursor: pointer;
+        button {
+            border: 0;
+            background: transparent;
+            display: block;
+            height: 10px;
+            width: 10px;
+            outline: none;
+            line-height: 0px;
+            font-size: 0px;
+            color: transparent;
+            padding: 5px;
+            cursor: pointer;
+            &:hover, &:focus {
+                outline: none;
+                &:before {
+                    opacity: 1;
+                }
+            }
+            &:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                text-align: center;
+                background-color: transparent;
+                border: 1px solid white;
+                opacity: 0.75;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+        &.slick-active button:before {
+            background-color: #00e0d0;
+            border-color: #00e0d0;
+            opacity: 0.75;
+        }
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .slide-intro {
+        padding-bottom: 90px;
+        min-height: 375px;
+    }
+    .carousel-intro .slick-dots {
+        bottom: 75px;
+    }
+}
 
 @media screen and (min-width: 750px) {
     .menu-bar {

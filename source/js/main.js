@@ -19,3 +19,36 @@
     });
 })();
 
+$(document).ready(function(){
+    $('.carousel-intro').slick({
+        arrows: false,
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true
+    });
+    $('.testimonials-carousel').slick({
+        arrows: false,
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        asNavFor: '.testimonials-indicators'
+    });
+    $('.testimonials-indicators').slick({
+        arrows: true,
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        variableWidth: true,
+        centerMode: true,
+        centerPadding: '40px',
+        asNavFor: '.testimonials-carousel',
+        focusOnSelect: true
+    });
+});
