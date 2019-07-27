@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,900&subset=cyrillic');
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900&subset=cyrillic');
-@import url('https://fonts.googleapis.com/css?family=Hammersmith+One');
-
-@import "partial/_normalize.scss";
+@import "partial/_normalize";
 
 body, html {
   margin: 0;
@@ -20,17 +16,19 @@ h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
-@import "partial/_lib.scss";
+@import "partial/_lib";
 
-@import "partial/_sprite.scss";
-@import "partial/_logo.scss";
-@import "partial/_button.scss";
-@import "partial/_header.scss";
-@import "partial/_about.scss";
-@import "partial/_expertise.scss";
-@import "partial/_team.scss";
-@import "partial/_works.scss";
-@import "partial/_testimonials.scss";
-@import "partial/_contact.scss";
-@import "partial/_footer.scss";
+@import "partial/_sprite";
+@include retina-sprites($retina-groups);
+
+@import "partial/_logo";
+@import "partial/_button";
+@import "partial/_header";
+@import "partial/_about";
+@import "partial/_expertise";
+@import "partial/_team";
+@import "partial/_works";
+@import "partial/_testimonials";
+@import "partial/_contact";
+@import "partial/_footer";
 

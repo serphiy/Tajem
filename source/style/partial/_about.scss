@@ -16,7 +16,7 @@
     padding: 25px 0;
 }
 .about-description__img {
-    background-image: url("images/logo-big.png");
+    background-image: url("../img/logo-big.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -55,7 +55,7 @@
     }
 
 .about-video {
-    background-image: url("images/video-play.png"), linear-gradient(to right, rgba(9,5,47,0.85) 0%, rgba(49,29,94,0.85) 100%), url("images/bg-city.png");
+    background-image: url("../img/video-play.png"), linear-gradient(to right, rgba(9,5,47,0.85) 0%, rgba(49,29,94,0.85) 100%), url("../img/bg-city.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

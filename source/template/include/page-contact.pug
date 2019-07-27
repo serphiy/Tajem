@@ -2,10 +2,14 @@ section#page-contact.page-contact
     .contact-form
         h3.contact-form__title GIVE US A GOOD NEWS
         form.contact-form__form
-            input(placeholder="Name").contact-form__item
-            input(type="email" placeholder="Email").contact-form__item
-            input(placeholder="Subject").contact-form__item
-            textarea(placeholder="Your message").contact-form__item.contact-form__item_large
+            label.contact-form__label Name
+                input(placeholder="Name").contact-form__item
+            label.contact-form__label Email
+                input(type="email" placeholder="Email").contact-form__item
+            label.contact-form__label Subject
+                input(placeholder="Subject").contact-form__item
+            label.contact-form__label Message
+                textarea(placeholder="Your message").contact-form__item.contact-form__item_large
             input(type="submit" value="SUBMIT").button
     .contact-clients
         h3.contact-clients__title OUR HAPPY CLIENTS

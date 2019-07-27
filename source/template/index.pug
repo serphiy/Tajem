@@ -1,10 +1,21 @@
 doctype html
-html
+html(lang="en")
     head
         meta(charset="utf-8")
         title Tajem
         meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(http-equiv="Cache-Control" content="public")
+        meta(http-equiv="x-dns-prefetch-control" content="on")
+        meta(name="description" content="Tajem")
+        meta(name="keywords" content="tajem")
+        meta(name="robots" content="index, follow")
+        link(rel="preconnect" href="//fonts.gstatic.com" crossorigin)
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,900&subset=cyrillic&display=swap")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900&subset=cyrillic&display=swap")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hammersmith+One&display=swap")
         link(rel="stylesheet" type="text/css" href="css/main.min.css")
+        include include/favicons.pug
     body
         include include/page-header.pug
         include include/page-about.pug

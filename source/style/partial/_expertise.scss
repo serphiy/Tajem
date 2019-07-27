@@ -67,22 +67,22 @@
         margin: 32px 0 0 0;
     }
         .expertise-card__icon_web {
-            @include sprite($icon-web);
+            @include retina-sprite($icon-web-group);
         }
         .expertise-card__icon_branding {
-            @include sprite($icon-branding);
+            @include retina-sprite($icon-branding-group);
         }
         .expertise-card__icon_mobile {
-            @include sprite($icon-mobile);
+            @include retina-sprite($icon-mobile-group);
         }
         .expertise-card__icon_optimization {
-            @include sprite($icon-optimization);
+            @include retina-sprite($icon-optimization-group);
         }
         .expertise-card__icon_game {
-            @include sprite($icon-game);
+            @include retina-sprite($icon-game-group);
         }
         .expertise-card__icon_love {
-            @include sprite($icon-love);
+            @include retina-sprite($icon-love-group);
         }
     .expertise-card__title {
         background-color: #fff;
